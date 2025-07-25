@@ -163,7 +163,7 @@ describe('GET /users', function() {
     const response = await request(app)
       .get('/users')
       .set('Accept', 'application/json')
-    expect(response.headers["Content-Type"]).toMatch(/json/);
+    expect(response.headers["content-type"]).toMatch(/json/);
     expect(response.status).toEqual(200);
     expect(response.body.email).toEqual('foo@bar.com');
   });
